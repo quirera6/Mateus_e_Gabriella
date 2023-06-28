@@ -1,88 +1,112 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>TOMOKO ESTOFADOS</title>
-  <meta content="">
-<link rel="stylesheet" href="style.css">
+  <title>Exemplo de Carrossel</title>
+  <style>
+    .carousel {
+      width: 400px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .carousel .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .carousel .slide.active {
+      opacity: 1;
+    }
+    
+    .especificacoes {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="site">
-  <div class="titulo">TOMOKO ESTOFADOS</div>
-  <div class="nav bar">
-  </div>
+    <div class="carousel">
+      <div class="slide active">
+        <img src="johnny e jesus.png" alt="Imagem 1">
+      </div>
+      <div class="slide">
+        <img src="speedwagon.png" alt="Imagem 2">
+      </div>
+      <div class="slide">
+        <img src="banana doppio.png" alt="Imagem 3">
+      </div>
+    </div>
 
-  <div class="col1">
-     Travesseiro Johnny Joestar e Jesus<br>
-       <img src="johnny e jesus.png" width="200px"><br>
-       <style>
-        div{
-          border: 1px solid cyan;
+    <div class="titulo">TOMOKO ESTOFADOS</div>
+    <div class="navbar">
+      <div class="titulo-search">
+        <div class="search-bar">
+          <input type="text" placeholder="Pesquisar...">
+          <button type="button">Buscar</button>
+        </div>
+      
+    </div>
 
-        }
-      </style>
-       <div>Uma almofada confortável em níveis quanticos!<br>
-        Respeitando a Proporção Áurea.</div>
-  </div>
+    <div class="coluna">
+      <h2>Travesseiro Johnny Joestar e Jesus</h2>
+      <img src="johnny e jesus.png" width="200px" alt="Johnny Joestar e Jesus">
+      <p>Uma almofada confortável em níveis quânticos! Respeitando a Proporção Áurea.</p>
+      <button class="botao" onclick="exibirEspecificacoes('travesseiro')">Ver Especificações do Produto</button>
+      <div id="especificacoes-travesseiro" class="especificacoes">
+        <h3>Especificações do Travesseiro Johnny Joestar e Jesus:</h3>
+        <ul>
+          <li>Material: XPTO</li>
+          <li>Tamanho: 50cm x 50cm</li>
+          <li>Peso: 1kg</li>
+          <li>Bonus em orações: +161803398875 pontos</li>
+          
+        </ul>
+      </div>
+    </div>
 
-  <div class="col2">
-    Sofá + Coberta Speedwagon<br>
-    <img src="speedwagon.png" width="200px"><br>
-    <style>
-      div{
-        border: 1px solid cyan;
+    <div class="coluna">
+      <h2>Sofá + Coberta Speedwagon</h2>
+      <img src="speedwagon.png" width="200px" alt="Sofá Speedwagon">
+      <p>Sofá clássico do século XIX. Produto vintage e exclusivo no mercado!</p>
+      <button class="botao" onclick="exibirEspecificacoes('sofa')">Ver Especificações do Produto</button>
+      <div id="especificacoes-sofa" class="especificacoes">
+        <h3>Especificações do Sofá + Coberta Speedwagon:</h3>
+        <ul>
+          <li>Material: ABC</li>
+          <li>Tamanho: 180cm x 80cm</li>
+          <li>Peso (sofá): 30kg</li>
+          <li>Peso (coberta): 1.6kg</li>
+         
+        </ul>
+      </div>
+    </div>
 
-      }
-    </style>
-    <div>Sofá clássico do século XIX.<br>
-    Produto vintage e esclusivo no mercado!</div>
-
-  <div class="col3">
-    Pelúcia limitada Banana Doppio edição Deluxe.<br>
-    <img src="banana doppio.png" width="200px"><br>
-    <style>
-      div{
-        border: 1px solid cyan;
-
-      }
-      </style>
-      <div>Pelúcia 100% algodão, preenchida de cabelo do próprio Doppio Vinnegar!<br>
-       Edição limitada.</div>
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="coluna">
+      <h2>Pelúcia limitada Banana Doppio edição Deluxe</h2>
+      <img src="banana doppio.png" width="200px" alt="Banana Doppio">
+      <p>Pelúcia 100% algodão, preenchida com cabelo do próprio Doppio Vinegar! Edição limitada.</p>
+      <button class="botao" onclick="exibirEspecificacoes('pelucia')">Ver Especificações do Produto</button>
+      <div id="especificacoes-pelucia" class="especificacoes">
+        <h3>Especificações da Pelúcia Banana Doppio edição Deluxe:</h3>
+        <ul>
+          <li>Material: Algodão</li>
+          <li>Tamanho: 30cm</li>
+          <li>Peso: 0.5kg</li>
+          <li>Assombração: Doppio recebe ligações do chefe durante horários aleatórios do dia.</li>
+          
+        </ul>
+      </div>
 
 </body>
 </html>
